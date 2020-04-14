@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Post from './components/Post';
+import posts from './mock/posts';
 
 class App extends Component{
     post = {
