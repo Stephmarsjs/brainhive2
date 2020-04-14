@@ -4,26 +4,18 @@ import Post from './components/Post';
 import posts from './mock/posts';
 
 class App extends Component{
-    post = {
-      posterName: 'Stephanie',
-      resourceAuthor: 'Tim Cook',
-      skillLevel: 'Avdanced',
-      cohort: '0',
-      title: 'How to async-ronize',
-      technology: 'Javascript',
-      summary: 'This is imformative stuff about async.',
-      link: 'www.google.com/TimCook',
-      resourceType: 'Article',
-      datePublished: '2017-11-15.00:00z',
-      length: '4 minutes',
-      rating: '3',
-      comments: 'It could have been better.'
-
-    }
+   renderPosts = () => {
+     const display = posts.map((post) => {
+       return <Posts post={post} />;
+     });
+     // [<Post post=[0/>, <Post post[1]/>, <Post post[2]/>]
+     return display;
+   }
   render() {
   return (
     <div className="App">
-     <Post post={this.post}/>
+    <h1>Welcome to BrainHive!</h1>
+    <div className="postList">{this.renderPosts()}</div>
     </div>
     );
    }
