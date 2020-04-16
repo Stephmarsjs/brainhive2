@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(to bottom right, brown, yellow);
 }
 
 .App-logo {
@@ -38,8 +39,25 @@
 }
 
 .box {
-  margin: 5px;
-  padding: 10px;
-  border: 2px;
-  background-color: aqua;
+  border: 1px solid #f6f6f6;
+  border-radius: 10px;
+  border-bottom-width: 0px;
+  box-shadow: 1px 10px 20px #000000;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 700px;
+  background-color: #f7f7f7;
+}
+
+.postList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#text {
+  font-family: georgia;
+  font-weight: 500;
 }

@@ -6,7 +6,7 @@ import posts from './mock/posts';
 class App extends Component{
    renderPosts = () => {
      const display = posts.map((post) => {
-       return <Posts post={post} />;
+       return <Post post={post} />;
      });
      // [<Post post=[0/>, <Post post[1]/>, <Post post[2]/>]
      return display;
@@ -14,7 +14,7 @@ class App extends Component{
   render() {
   return (
     <div className="App">
-    <h1>Welcome to BrainHive!</h1>
+    <h1 id="text">Welcome to BrainHive!</h1>
     <div className="postList">{this.renderPosts()}</div>
     </div>
     );

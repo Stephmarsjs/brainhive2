@@ -22,8 +22,7 @@ export default [
       cohort: "8",
       title: "Complete React Tutorial (& Redux) #12 - Nesting Components",
       categories: ["react", "redux"],
-      summary:
-        "This was a quick video that efficiently shows how to nest components in a React app.",
+      summary: "This was a quick video that efficiently shows how to nest components in a React app.",
       link: "https://www.youtube.com/watch?v=dQublHlGgBw",
       resourceType: "Video",
       datePublished: "2018-08-10.00:00:00z",
@@ -31,7 +30,7 @@ export default [
       timeToComplete: 8,
       rating: 5,
       comments: [
-        { commenter: "Shaun Pelling", text: "Remember to subscribe, mate." },
+          { commenter: "Shaun Pelling", text: "Remember to subscribe, mate." },
       ],
     },
     {
@@ -57,10 +56,8 @@ export default [
       cohort: "8",
       title: "Learn React.js Basics - For Beginners",
       categories: ["React"],
-      summary:
-        "This was a great article about React components, props, and state.",
-      link:
-        "https://www.freecodecamp.org/news/start-your-journey-into-the-world-of-react-by-learning-these-basics-d6e05d3655e3/",
+      summary: "This was a great article about React components, props, and state.",
+      link: "https://www.freecodecamp.org/news/start-your-journey-into-the-world-of-react-by-learning-these-basics-d6e05d3655e3/",
       resourceType: "Article",
       datePublished: "2019-06-03.00:00:00z",
       videoLength: null,
@@ -75,10 +72,8 @@ export default [
       cohort: "10",
       title: "Cloud Computing Design Patterns",
       categories: ["cloud", "design patterns", "architecture"],
-      summary:
-        "This was a good article about designing software architecure for cloud computing",
-      link:
-        "http://couldpatterns.org/mechanismis/cloud_storage_management_portal",
+      summary: "This was a good article about designing software architecure for cloud computing",
+      link: "http://couldpatterns.org/mechanismis/cloud_storage_management_portal",
       resourceType: "Article",
       datePublished: "2011-01-19.00:00:00z",
       videoLength: null,
@@ -93,8 +88,7 @@ export default [
       cohort: "8",
       title: "React Tutorial How to build React App in few minutes",
       categories: ["React", "API"],
-      summary:
-        "React.js is one of the most popular front-end frameworks nowadays, which lots of people find useful to learn.  In this video, I’m going to create a simple React.js application with fetching data from the API in 5 minutes, step by step.",
+      summary: "React.js is one of the most popular front-end frameworks nowadays, which lots of people find useful to learn.  In this video, I’m going to create a simple React.js application with fetching data from the API in 5 minutes, step by step.",
       link: "www.google.com/search?q=Albert%20Einstein",
       resourceType: "Video tutorial",
       datePublished: "2019-11-04.00:00z",
@@ -109,10 +103,8 @@ export default [
       cohort: "8",
       title: "Presentational and Container Components",
       categories: ["React", "Redux"],
-      summary:
-        "This article explains the benefits of approach of Presentational Components",
-      link:
-        "https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0",
+      summary: "This article explains the benefits of approach of Presentational Components",
+      link: "https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0",
       resourceType: "Article",
       datePublished: "2017-23-03.00:00:00z",
       videoLength: null,

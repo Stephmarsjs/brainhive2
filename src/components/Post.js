@@ -7,13 +7,13 @@ const Post = ({post}) => {
 
     return (  
         <div className={'box'}>
-        <h2>{post.title}</h2>
-        <p>{post.resourceAuthor}</p>
-        {post.videoLength ? (<p>Length: {post.videoLength}</p>) : null }
+        <h2 id="text">{post.title}</h2>
+        <p id="text">{post.resourceAuthor}</p>
+        {post.videoLength ? (<p id="text">Length: {post.videoLength}</p>) : null }
         {/* {conditional ? true code : false code */}
-        <p>Rating: {post.rating}</p>
-        <p>Comments: {post.comments.length}</p>
-       <p>{post.length}</p>
+        <p id="text">Rating: {post.rating}</p>
+        <p id="text">Comments: {post.comments.length}</p>
+       <p id="text">{post.length}</p>
         </div>
     )
   }
