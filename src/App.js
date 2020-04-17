@@ -3,6 +3,8 @@ import './App.css';
 import Post from './components/Post';
 import posts from './mock/posts';
 
+import PostForm from "./components/PostForm";
+
 class App extends Component{
    renderPosts = () => {
      const display = posts.map((post) => {
@@ -12,11 +14,12 @@ class App extends Component{
      return display;
    }
   render() {
-  return (
-    <div className="App">
-    <h1 id="text">Welcome to BrainHive!</h1>
-    <div className="postList">{this.renderPosts()}</div>
-    </div>
+    return (
+      <div className="App">
+        <h1 id="text">Welcome to BrainHive!</h1>
+          <div className="postList">{this.renderPosts()}</div>
+          <PostForm />
+      </div>
     );
    }
   }

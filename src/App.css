@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-image: linear-gradient(to bottom right, brown, yellow);
+  background-image: linear-gradient(to bottom right, red, orange);
 }
 
 .App-logo {
@@ -60,4 +60,15 @@
 #text {
   font-family: georgia;
   font-weight: 500;
+}
+
+#post-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-Items: center;
+  padding-bottom: 8px;
+  margin-bottom: 6px;
+
+  
 }
