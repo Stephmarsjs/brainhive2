@@ -17,7 +17,6 @@ class PostForm extends Component {
             timeToComplete: "",
             rating: "",
             comments: [],
-        }
         };
 
     handleChange = (e) => {
@@ -53,49 +52,147 @@ class PostForm extends Component {
     render() {
         return (
           <div>
-            <form style={myStyles.form} onSubmit={(e) => this.handleSubmit()}>
+            <form style={myStyles.form} onSubmit={(e) => this.handleSubmit(e)}>
               <input
+                style={myStyles.input}
                 type="text"
                 id="posterName"
                 placeholder="Your Name"
                 value={this.state.posterName}
                 onChange={(e) => this.handleChange(e)}
+                required
                  />
               <input
+                style={myStyles.input}
+                type="text"
+                id="resourceAuthor"
+                placeholder="Author Name"
+                value={this.state.resourceAuthor}
+                onChange={(e) => this.handleChange(e)}
+                 />
+                 {/* dropdown skill level */}
+              <select
+                style={myStyles.input}
+                id="jobSkillLevel"
+                value={this.state.jobSkillLevel}
+                onChange={(e) => this.handleChange(e)}
+                  >
+                  <option value="" disabled>
+                    Author skill level
+                  </option>
+                  <option value="Intro">Intro</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Advanced">Advanced</option>
+              </select>
+              <input
+                style={myStyles.input}
                 type="text"
                 id="cohort"
                 placeholder="Cohort #"
                 value={this.state.cohort}
                 onChange={(e) => this.handleChange(e)}
-                 />  
-
+                />
                <input
+                style={myStyles.input}
                 type="text"
                 id="title"
                 placeholder="Title"
                 value={this.state.title}
                 onChange={(e) => this.handleChange(e)}
                  />
-
                <input
+                style={myStyles.input}
                 type="text"
-                id="resourceAuthor" 
-                placeholder="Resource Author" 
-                value={this.state.resourceAuthor}
+                id="categories" 
+                placeholder="Categories (separate multiples wiht commas)" 
+                value={this.state.categories}
                 onChange={(e) => this.handleChange(e)}
                  />
-
                <input
+                style={myStyles.input}
                 type="text"
-                id="jobSkillLevel"
-                placeholder="Skill Level"
-                value={this.state.jobSkillLevel}
+                id="link"
+                placeholder="Resource Link"
+                value={this.state.link}
                 onChange={(e) => this.handleChange(e)}  
                  />
-                  <button type="submit">Submit</button>
-                    </form>
-                </div>
+               <input  
+                style={myStyles.input}
+                type="text"
+                id="resourceType"
+                placeholder="Resource Type"
+                value={this.state.resourceType}
+                onChange={(e) => this.handleChange(e)}
+                />
+              <input
+                style={myStyles.input}
+                type="date"
+                id="datePublished"
+                placeholder="Published Date"
+                value={this.state.datePublished}
+                onchange={(e) => this.handleChange(e)}
+                 />
+              <input
+                style={myStyles.input}
+                type="text"
+                id="videoLength"
+                placeholder="Length of video (optional)"
+                value={this.state.videoLength}
+                onChange={(e) => this.handleChange(e)}
+                />
+              <input
+                style={myStyles.input}
+                type="text"
+                id="timeToComplete"
+                placeholder="Time to complete resource"
+                value={this.state.timeToComplete}
+                onChange={(e) => this.handleChange(e)}
+              />
+              <input
+                style={myStyles.input}
+                type="text"
+                id="rating"
+                placeholder="1 to 5 rating"
+                value={this.state.rating}
+                onChange={(e) => this.handleChange(e)}
+              />
+              <button style={myStyles.button} type="submit"> 
+                Submit
+              </button>
+           </form>
+        </div>
+      );
+    }
+  }
+  
+  const myStyles = {
+    form: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems:"center",
+      marginRight: "20%",
+      marginLeft: "20%",
+      flexDirection: "column",
+    },
+    input: {
+      width: "70%",
+      height: 32,
+      fontSize: 20,
+      marginBotton: 4,
+    },
+    button: {
+      alignSelf:"center",
+      backgroundColor: "#ff62a1",
+      marginLeft: 5,
+      marginRight: 5,
+      marginBotton: 10,
+      marginTop: 5,
+      width: "50%",
+      borderRadius: 10,
+      fontSize: 16,
+      paddingTop: 10,
+      paddingBottom: 10,
+    },
+  };
 
-            )
-        }
     export default PostForm;
