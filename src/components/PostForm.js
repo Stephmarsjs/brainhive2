@@ -4,10 +4,20 @@ import React, { Component } from 'react';
 class PostForm extends Component {
         state = {
             posterName: "",
+            resourceAuthor: "",
+            jobSkillLevel: "",
             cohort: "",
             title: "",
-            resourceAuthor: "",
-            jobSkillLevel: ""
+            categories: "",
+            summary: "",
+            link: "",
+            resroucetype: "",
+            datePublished: null,
+            videoLength: "",
+            timeToComplete: "",
+            rating: "",
+            comments: [],
+        }
         };
 
     handleChange = (e) => {
@@ -18,13 +28,32 @@ class PostForm extends Component {
     };
 
     handleSubmit = (e) => {
-        alert(`${this.state.posterName} ${this.state.cohort} ${this.title} ${this.state.resourceAuthor} ${this.state.jobSkillLevel} ${this.length}`);
-        e.preventDafault();
-    }
+      e.preventDafault();
+      // add any form validation
+      const postData = { ...this.state };
+      postData.categories = postData.categories.split(",");
+      this.props.addPost(postData);
+      this.setState({
+        posterName: "",
+        resourceAuthor: "",
+        jobSkillLevel: "",
+        cohort: "",
+        title: "",
+        categories: "",
+        summary: "",
+        link: "",
+        resourceType: "",   
+        datePublished: null,
+        videoLength: "",
+        timeToComplete: "",
+        rating: "",
+        comments: [],  
+      });
+    };
     render() {
         return (
           <div>
-            <form id="post-form">
+            <form style={myStyles.form} onSubmit={(e) => this.handleSubmit()}>
               <input
                 type="text"
                 id="posterName"
@@ -69,6 +98,4 @@ class PostForm extends Component {
 
             )
         }
-    }
-
     export default PostForm;
