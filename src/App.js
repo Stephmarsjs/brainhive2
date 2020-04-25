@@ -5,14 +5,23 @@ import posts from './mock/posts';
 
 import PostForm from "./components/PostForm";
 
-class App extends Component{
-   renderPosts = () => {
-     const display = posts.map((post) => {
-       return <Post post={post} />;
-     });
-     // [<Post post=[0/>, <Post post[1]/>, <Post post[2]/>]
-     return display;
-   }
+class App extends Component {
+  state = {
+    posts: [...posts],
+  };
+
+  addPost = (postData) => {
+    console.log('Hello', postData)
+    this.setState({
+      post: [...this.state.posts, postData],
+    });
+  };
+  renderPosts = () => {
+    const display = this.state.posts.map((post) => {
+      return <Post post={post} />;
+    });
+    return display;
+  };  
   render() {
     return (
       <div className="App">
