@@ -25,8 +25,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="header">
         <h1 id="text">Welcome to BrainHive!</h1>
+        <div id="navigation">
+          <a href=">Add Post"></a>
+          </div>
+        </div>
           <div className="postList">{this.renderPosts()}</div>
+          <postForm addPosr={this.addPost} />
           <PostForm />
       </div>
     );
