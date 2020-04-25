@@ -11,7 +11,7 @@ class App extends Component {
   };
 
   addPost = (postData) => {
-    console.log('Hello', postData)
+    console.log("Hello", postData)
     this.setState({
       post: [...this.state.posts, postData],
     });
@@ -26,14 +26,13 @@ class App extends Component {
     return (
       <div className="App">
         <div className="header">
-        <h1 id="text">Welcome to BrainHive!</h1>
+        <h1 id="brand">Welcome to BrainHive!</h1>
         <div id="navigation">
-          <a href=">Add Post"></a>
+          <a href="/addPost">Add Post</a>
           </div>
         </div>
           <div className="postList">{this.renderPosts()}</div>
-          <postForm addPosr={this.addPost} />
-          <PostForm />
+          <PostForm addPost={this.addPost} />
       </div>
     );
    }

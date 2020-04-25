@@ -1,5 +1,6 @@
 export default [
-    {
+    { 
+      id: 1,
       posterName: "Arnell Milhouse",
       resourceAuthor: "Albert Einstein",
       jobSkillLevel: "Advanced",
@@ -15,7 +16,8 @@ export default [
       rating: 5,
       comments: [{ commenter: "Cliff", text: "Nice post" }],
     },
-    {
+    { 
+      id: 2,
       posterName: "Ava Callery",
       resourceAuthor: "Shaun Pelling (The Net Ninja)",
       jobSkillLevel: "Advanced",
@@ -34,6 +36,7 @@ export default [
       ],
     },
     {
+      id: 3,
       posterName: "dAwG4_43675l",
       resourceAuthor: "Robinson Crusoe",
       jobSkillLevel: "Intermediate",
@@ -50,6 +53,7 @@ export default [
       comments: [{ commenter: "John", text: "Nice post" }],
     },
     {
+      id: 4,
       posterName: "Katie Barriere",
       resourceAuthor: "Anchal Nigam",
       jobSkillLevel: "Beginner",
@@ -66,6 +70,7 @@ export default [
       comments: [{ commenter: "Katie", text: "Great article" }],
     },
     {
+      id: 5,
       posterName: "Michael Spremulli",
       resourceAuthor: "Erl Cope",
       skillLevel: "Advanced",
@@ -82,6 +87,7 @@ export default [
       comments: [{ poster: "Cliff", text: "Not bad, a little out of date." }],
     },
     {
+      id: 6,
       posterName: "Nicole Luguesi",
       resourceAuthor: "How to code with Duomly",
       jobSkillLevel: "beginner",
@@ -97,6 +103,7 @@ export default [
       comments: [{ commentor: "Cliff", text: "Nice post" }],
     },
     {
+      id: 7,
       posterName: "Stephanie Rodriguez",
       resourceAuthor: "Dan Abramov",
       jobSkillLevel: "Advanced",

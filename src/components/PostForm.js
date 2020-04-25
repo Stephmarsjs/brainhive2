@@ -12,8 +12,8 @@ class PostForm extends Component {
             summary: "",
             link: "",
             resroucetype: "",
-            datePublished: null,
-            videoLength: "",
+            datePublished: "",
+            videoLength: undefined,
             timeToComplete: "",
             rating: "",
             comments: [],
@@ -42,8 +42,8 @@ class PostForm extends Component {
         summary: "",
         link: "",
         resourceType: "",   
-        datePublished: null,
-        videoLength: "",
+        datePublished: "",
+        videoLength: undefined,
         timeToComplete: "",
         rating: "",
         comments: [],  
@@ -130,7 +130,7 @@ class PostForm extends Component {
                 id="datePublished"
                 placeholder="Published Date"
                 value={this.state.datePublished}
-                onchange={(e) => this.handleChange(e)}
+                onChange={(e) => this.handleChange(e)}
                  />
               <input
                 style={myStyles.input}
