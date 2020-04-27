@@ -7,7 +7,7 @@ const Post = ({post}) => {
 
     return (  
         <div className={'box'}>
-        <h2 id="text">{post.title}</h2>
+        <h2 className="postTitle">{post.title}</h2>
         <p id="text">{post.resourceAuthor}</p>
         {post.videoLength ? (<p id="text">Length: {post.videoLength}</p>) : null }
         {/* {conditional ? true code : false code */}

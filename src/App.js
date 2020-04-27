@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Post from './components/Post';
 import posts from './mock/posts';
-
 import PostForm from "./components/PostForm";
 
 class App extends Component {
@@ -28,10 +27,12 @@ class App extends Component {
         <div className="header">
         <h1 id="brand">Welcome to BrainHive!</h1>
         <div id="navigation">
-          <a href="/addPost">Add Post</a>
+          <a href="">Add Post </a>
           </div>
         </div>
-          <div className="postList">{this.renderPosts()}</div>
+          <div className="postList">
+            {this.renderPosts()}
+          </div>
           <PostForm addPost={this.addPost} />
       </div>
     );

@@ -11,3 +11,89 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #717c80;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.box {
+  border: 1px solid #171717;
+  border-radius: 9px;
+  border-bottom-width: 0px;
+  box-shadow: 1px 10px 20px #000000;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 5px 3px 5px black;
+  background-color: #f7f7f7;
+}
+
+.box:hover {
+  box-shadow: 15px 9px 15px black;
+}
+.postList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#text {
+  font-family: georgia;
+  font-weight: 500;
+}
+
+#postTitle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 8%;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: cornflowerblue;
+  padding: 0 3vw;
+  margin-bottom: 16px;
+}
+
+#brand {
+  flex: 1;
+  display: flex;
+}
+#navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 32px;
+}
+#post-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-Items: center;
+  padding-bottom: 8px;
+  margin-bottom: 6px;
+}

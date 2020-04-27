@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Button } from "react-materialize";
 
 class PostForm extends Component {
         state = {
@@ -12,8 +12,8 @@ class PostForm extends Component {
             summary: "",
             link: "",
             resroucetype: "",
-            datePublished: "",
-            videoLength: undefined,
+            datePublished: null,
+            videoLength: "",
             timeToComplete: "",
             rating: "",
             comments: [],
@@ -170,28 +170,6 @@ class PostForm extends Component {
       display: "flex",
       justifyContent: "center",
       alignItems:"center",
-      marginRight: "20%",
-      marginLeft: "20%",
-      flexDirection: "column",
-    },
-    input: {
-      width: "70%",
-      height: 32,
-      fontSize: 20,
-      marginBotton: 4,
-    },
-    button: {
-      alignSelf:"center",
-      backgroundColor: "#ff62a1",
-      marginLeft: 5,
-      marginRight: 5,
-      marginBotton: 10,
-      marginTop: 5,
-      width: "50%",
-      borderRadius: 10,
-      fontSize: 16,
-      paddingTop: 10,
-      paddingBottom: 10,
     },
   };
 
