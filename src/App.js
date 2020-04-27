@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import PostList from './components/PostList';
 import Post from './components/Post';
 import posts from './mock/posts';
+import ViewPosts from './components/ViewPosts';
 
 
 class App extends Component {

@@ -1,4 +1,4 @@
-export default [
+const posts = [
     { 
       id: 1,
       posterName: "Arnell Milhouse",
@@ -120,3 +120,5 @@ export default [
       comments: [{ commenter: "Valerie", text: "This was informative." }],
     },
   ];
+
+  export default posts;
