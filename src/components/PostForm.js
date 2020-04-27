@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Button } from "react-materialize";
 
-class PostForm extends Component {
-        state = {
+
+const INITIAL_STATE = {
+            id: 0,
             posterName: "",
             resourceAuthor: "",
             jobSkillLevel: "",
