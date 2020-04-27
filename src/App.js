@@ -3,7 +3,7 @@ import './App.css';
 import Post from './components/Post';
 import posts from './mock/posts';
 import PostForm from "./components/PostForm";
-import Navbar from "./components/Navbar";
+import Navbar from './components/Navbar';
 
 class App extends Component {
   state = {
