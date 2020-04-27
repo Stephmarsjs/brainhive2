@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from "react-materialize";
-
 
 const INITIAL_STATE = {
             id: 0,
