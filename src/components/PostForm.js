@@ -18,37 +18,23 @@ const INITIAL_STATE = {
             timeToComplete: "",
             rating: "",
             comments: [],
-        };
+    }
 
-    handleChange = (e) => {
-        this.setState ({
+   class PostForm extends Component {
+        state = { ...INITIAL_STATE };
+
+        handleChange = (e) => {
+          this.setState ({
             ...this.state,
             [e.target.id]: e.target.value,
         });
     };
-
     handleSubmit = (e) => {
       e.preventDafault();
-      // add any form validation
       const postData = { ...this.state };
       postData.categories = postData.categories.split(",");
       this.props.addPost(postData);
-      this.setState({
-        posterName: "",
-        resourceAuthor: "",
-        jobSkillLevel: "",
-        cohort: "",
-        title: "",
-        categories: "",
-        summary: "",
-        link: "",
-        resourceType: "",   
-        datePublished: "",
-        videoLength: undefined,
-        timeToComplete: "",
-        rating: "",
-        comments: [],  
-      });
+      this.setState({ ...INITIAL_STATE });
     };
     render() {
         return (
