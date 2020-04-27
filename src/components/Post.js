@@ -9,7 +9,7 @@ class Post extends Component {
   };
 
   handleClick = () => {
-    this.props.handleSelecr(this.props.post.id); // This sends back the ID of the post.
+    this.props.handleSelect(this.props.post.id); // This sends back the ID of the post.
     this.SetState({clicked: true}) // Once an item is clicked, the state gets set to true.
 };
 

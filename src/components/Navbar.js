@@ -5,7 +5,7 @@ const Navbar = (props) => {
     return (
         <div className="header">
             <h1 id="brand">
-                <Link to="/">Welccome To BrainHive!</Link>
+                <Link to="/">Welcome To BrainHive!</Link>
             </h1>
             <div id="navigation">
                 <button>

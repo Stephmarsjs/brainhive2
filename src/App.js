@@ -3,42 +3,55 @@ import './App.css';
 import PostForm from "./components/PostForm";
 import Navbar from './components/Navbar';
 import PostList from './components/PostList';
-import Post from './components/Post';
-import posts from './mock/posts';
+import Post from "./components/Post";
 import ViewPosts from './components/ViewPosts';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import INITIAL_POSTS from './mock/posts';
+
 
 
 class App extends Component {
+  // "global" state without redux
   state = {
-    posts: [...posts],
+    posts: [...INITIAL_POSTS],
+    selected: 1,
   };
 
   addPost = (postData) => {
-    console.log("Hello", postData)
-    this.setState({
-      post: [...this.state.posts, postData],
+    postData.id = this.state.posts.length +1;
+    console.log("hello", postData)
+    this.setState ({
+      ...this.state,
+      posts: [...this.state.posts, postData]
     });
-  };
-  renderPosts = () => {
-    const display = this.state.posts.map((post) => {
-      return <Post post={post} />;
-    });
-    return display;
-  };  
+  }
+ handleSelect = (id) => {
+   console.log('clicked', id)
+   this.setState({
+     ...this.state,
+     selected: id
+   })
+ }
   render() {
     return (
-      <div className="App">
-        <div className="header">
-        <h1 id="brand">Welcome to BrainHive!</h1>
-        <div id="navigation">
-          <a href="">Add Post </a>
-          </div>
-        </div>
-          <div className="postList">
-            {this.renderPosts()}
-          </div>
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route path="/" exact>
+              <PostList 
+                posts={this.state.posts}
+                handleSelect={this.handleSelect} />
+        </Route>  
+        <Route path="/add" exact>
           <PostForm addPost={this.addPost} />
+       </Route>
+       <Route path='/post/:postId'>
+          <ViewPosts post={this.state.posts[this.state.selected -1]}/>
+          </Route>
+        </Switch>
       </div>
+    </BrowserRouter>
     );
    }
   }

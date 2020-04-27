@@ -6,7 +6,7 @@ const ViewPosts = (props) => {
     const { postId } = useParams();
     const { post } = props;
     return (
-        <h3 id="text">{post.title}
+        <h3>{post.title}
         </h3>
     );
 }
