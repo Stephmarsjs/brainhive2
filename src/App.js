@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Post from './components/Post';
-import posts from './mock/posts';
 import PostForm from "./components/PostForm";
 import Navbar from './components/Navbar';
 import PostList from './components/PostList';
+import Post from './components/Post';
+import posts from './mock/posts';
+
 
 class App extends Component {
   state = {
