@@ -8,8 +8,6 @@ import ViewPosts from './components/ViewPosts';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import INITIAL_POSTS from './mock/posts';
 
-
-
 class App extends Component {
   // "global" state without redux
   state = {

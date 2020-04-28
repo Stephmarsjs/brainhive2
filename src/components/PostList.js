@@ -4,15 +4,14 @@ import React from 'react';
 const PostList = (props) => {
     const renderPosts = () => {
         const display = props.posts.map((post) => {
-            return <Post post={post}
-            key={post.id}
-            handleSelect = {props.handleSelect}/>
-        })
+            return ( 
+              <Post post={post} key={post.id} handleSelect = {props.handleSelect} />
+          );
+        });
         return display;
     };
-    return (
-        <div className="postList">{renderPosts()}</div>
-    );
+    return <div className="postList">{renderPosts()}</div>
 };
+
 
 export default PostList;
