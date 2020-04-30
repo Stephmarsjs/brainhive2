@@ -1,21 +1,45 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 
-const ViewPosts = (props) => {
-    const { postId } = useParams();
-    const { post } = props;
-    return (
-        <div className={'box'}>
-        <h2 className="postTitle">{post.title}</h2>
-        <p id="text">{post.resourceAuthor}</p>
-        {post.videoLength ? (<p id="text">Length: {post.videoLength}</p>) : null }
-        {/* {conditional ? true code : false code */}
-        <p id="text">Rating: {post.rating}</p>
-        <p id="text">Comments: {post.comments.length}</p>
-       <p id="text">{post.length}</p>
-        </div>
-    );
+class ViewPosts extends Component {
+    state = {
+        showComments: false,
+    };
+
+    clickHandler = () => {
+        this.setState({
+            showComments: !this.state.showComments,
+        });
+    };
+
+    renderComments = (post) => {
+        return post.comments.map((comments) => {
+            return (
+                <div className="box">
+                 <p>{comments.commenter}</p>
+                 <p>{comments.text}</p>   
+                </div>
+            )
+        })
+    };
+
+        render() {
+     const { postId } = this.props.match.params;
+        const { post } = this.props;
+        return (
+            <div>
+              <h3>{post.title}</h3>
+              <h5>{post.resourceAuthor}</h5>
+              <p>{post.summary}</p>
+              <p>{post.link}</p>          
+              <button onClick>
+              {this.state.showComments ? "Hide Comments" : "Show Comments"}
+              </button>
+              {this.state}
+            </div>
+        );
+    }
 }
 
-export default ViewPosts;
+export default withRouter(ViewPosts);

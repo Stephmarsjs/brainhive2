@@ -154,7 +154,16 @@ const INITIAL_STATE = {
     form: {
       display: "flex",
       justifyContent: "center",
-      alignItems:"center",
+      alignItems: "center",
+      marginRight: "20%",
+      marginLeft: "20%",
+      flexDirection: "column",
+    },
+    input: {
+      width: "70%",
+      height: 32,
+      fontSize: 20,
+      marginBottom: 4,
     },
   };
 
