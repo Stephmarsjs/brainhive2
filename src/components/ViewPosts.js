@@ -9,7 +9,7 @@ class ViewPosts extends Component {
 
     clickHandler = () => {
         this.setState({
-            showComments: !this.state.showComments,
+            showComments: !this.state.showComments
         });
     };
 
@@ -28,16 +28,16 @@ class ViewPosts extends Component {
      const { postId } = this.props.match.params;
         const { post } = this.props;
         return (
-            <div>
+           <center> <div>
               <h3>{post.title}</h3>
               <h5>{post.resourceAuthor}</h5>
               <p>{post.summary}</p>
               <p>{post.link}</p>          
-              <button onClick>
+              <button onClick={() => this.clickHandler()}> 
               {this.state.showComments ? "Hide Comments" : "Show Comments"}
               </button>
-              {this.state}
-            </div>
+              {this.state.showComments ? this.renderComments(post) : null}
+            </div> </center>
         );
     }
 }

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import PostList from './components/PostList';
 import Post from "./components/Post";
 import ViewPosts from './components/ViewPosts';
+import Button from "./components/Button";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import INITIAL_POSTS from './mock/posts';
 

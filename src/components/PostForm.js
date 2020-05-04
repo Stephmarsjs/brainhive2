@@ -160,11 +160,11 @@ const INITIAL_STATE = {
       flexDirection: "column",
     },
     input: {
-      width: "70%",
+      width: "100%",
       height: 32,
-      fontSize: 20,
+      fontSize: 18,
       marginBottom: 4,
-    },
+    }
   };
 
     export default PostForm;
