@@ -160,9 +160,9 @@ const INITIAL_STATE = {
       flexDirection: "column",
     },
     input: {
-      width: "100%",
+      width: "70%",
       height: 32,
-      fontSize: 18,
+      fontSize: 20,
       marginBottom: 4,
     }
   };

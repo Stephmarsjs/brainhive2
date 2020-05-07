@@ -20,12 +20,12 @@ render () {
         {this.state.clicked ? <Redirect to="/post/:postId"/>
         : null}
         <h2 className="postTitle">{post.title}</h2>
-        <p id="text">{post.resourceAuthor}</p>
-        {post.videoLength ? (<p id="text">Length: {post.videoLength}</p>) : null }
+        <p>{post.resourceAuthor}</p>
+        {post.videoLength ? (<p>Length: {post.videoLength}</p>) : null }
         {/* {conditional ? true code : false code */}
-        <p id="text">Rating: {post.rating}</p>
-        <p id="text">Comments: {post.comments.length}</p>
-       <p id="text">{post.length}</p>
+        <p>Rating: {post.rating}</p>
+        <p>Comments: {post.comments.length}</p>
+       <p>{post.length}</p>
         </div>
     )
   }

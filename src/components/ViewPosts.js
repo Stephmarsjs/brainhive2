@@ -16,7 +16,7 @@ class ViewPosts extends Component {
     renderComments = (post) => {
         return post.comments.map((comments) => {
             return (
-                <div className="box">
+                <div key={comments.commenter} className="box">
                  <p>{comments.commenter}</p>
                  <p>{comments.text}</p>   
                 </div>
@@ -24,6 +24,9 @@ class ViewPosts extends Component {
         })
     };
 
+    renderStars = (post) => {
+        const rating = post.rating
+    }
         render() {
      const { postId } = this.props.match.params;
         const { post } = this.props;
@@ -39,6 +42,16 @@ class ViewPosts extends Component {
               {this.state.showComments ? this.renderComments(post) : null}
             </div> </center>
         );
+    }
+}
+
+const myStyles = {
+    row: {
+        marginRight: "8%",
+        marginLeft: "8%",
+        display: "flex",
+        
+
     }
 }
 
