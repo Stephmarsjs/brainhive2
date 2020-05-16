@@ -28,12 +28,13 @@ const INITIAL_STATE = {
         });
     };
     handleSubmit = (e) => {
-      e.preventDafault();
+      e.preventDefault();
       const postData = { ...this.state };
       postData.categories = postData.categories.split(",");
       this.props.addPost(postData);
       this.setState({ ...INITIAL_STATE });
     };
+
     render() {
         return (
           <div>
@@ -89,7 +90,7 @@ const INITIAL_STATE = {
                 style={myStyles.input}
                 type="text"
                 id="categories" 
-                placeholder="Categories (separate multiples wiht commas)" 
+                placeholder="Categories (separate multiples with commas)" 
                 value={this.state.categories}
                 onChange={(e) => this.handleChange(e)}
                  />
@@ -141,9 +142,7 @@ const INITIAL_STATE = {
                 value={this.state.rating}
                 onChange={(e) => this.handleChange(e)}
               />
-              <button style={myStyles.button} type="submit"> 
-                Submit
-              </button>
+              <button type="submit">Submit</button>
            </form>
         </div>
       );
@@ -155,12 +154,12 @@ const INITIAL_STATE = {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      marginRight: "20%",
-      marginLeft: "20%",
+      marginRight: "15%",
+      marginLeft: "15%",
       flexDirection: "column",
     },
     input: {
-      width: "70%",
+      width: "80%",
       height: 32,
       fontSize: 20,
       marginBottom: 4,

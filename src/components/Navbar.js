@@ -7,10 +7,9 @@ const Navbar = (props) => {
             <h1 id="brand">
                 <Link to="/">Welcome To BrainHive!</Link>
             </h1>
+
             <div id="navigation">
-                <button>
                     <Link to="/add">Add Post</Link>
-                </button>
             </div>
         </div>
     );

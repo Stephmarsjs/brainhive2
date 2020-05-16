@@ -44,7 +44,7 @@ const posts = [
       title: "Striking it out on your own",
       categories: ["Self Help", "Health"],
       summary: "A how-to guide for surviving the apocalypse as a coder",
-      link: "www.myapi.com/endpoint/23463242346",
+      link: "http://www.google.com",
       resourceType: "Article",
       datePublished: "2020-03-18.30:00:00z",
       videoLength: null,

@@ -9,15 +9,15 @@ class Post extends Component {
   }
   
   handleClick = () => {
-    this.props.handleSelect(this.props.post.id); // This sends back the ID of the post.
-    this.setState({clicked: true}) // Once an item is clicked, the state gets set to true.
+    this.props.handleSelect(this.props.post.id);
+    this.setState({clicked: true}) 
 };
 
 render () {
   const { post } = this.props;
     return (  
-        <div className={'box'} onClick={() => this.handleClick()}>
-        {this.state.clicked ? <Redirect to="/post/:postId"/>
+        <div className={"box"} onClick={() => this.handleClick()}>
+        {this.state.clicked ? <Redirect to={`/post/${post.id}`} /> 
         : null}
         <h2 className="postTitle">{post.title}</h2>
         <p>{post.resourceAuthor}</p>
@@ -26,8 +26,8 @@ render () {
         <p>Rating: {post.rating}</p>
         <p>Comments: {post.comments.length}</p>
        <p>{post.length}</p>
-        </div>
-    )
+      </div>
+    );
   }
  }
  

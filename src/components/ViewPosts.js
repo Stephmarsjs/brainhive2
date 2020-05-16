@@ -15,11 +15,11 @@ class ViewPosts extends Component {
     };
 
     renderComments = (post) => {
-        return post.comments.map((comments) => {
+        return post.comments.map((comment) => {
             return (
                 <div className="box">
-                 <p>{comments.commenter}</p>
-                 <p>{comments.text}</p>   
+                 <p>{comment.commenter}</p>
+                 <p>{comment.text}</p>   
                 </div>
             );
         });
@@ -34,31 +34,20 @@ class ViewPosts extends Component {
         return stars;
     };
 
-    renderYoutube = (post) => {
-        if (post.link.indexOf("youtube") >= 0) {
-            const videoIdIndex = post.link.indexOf("?v=");
-            const videoId = post.link.substring(videoIdIndex + 3);
-            console.log(videoId);
-            return (
-              <iframe
-                title="video"
-                width="560"
-                height="315"
-                src={`https://wwww.youtube.com/embed/${videoId}`}
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                ></iframe>
-            );
-        };
-    };
         render() {
          const { postId } = this.props.match.params;
-         const post = this.props.post[postId - 1];
+         const post = this.props.post;
+         console.log(post); // undefined
+         console.log("Post id", {postId});
+         
          return (
               <div style={myStyles.container}>
               <h3>{post.title}</h3>
               <h5>{post.resourceAuthor}</h5>
+              <p>
+                  Shared by: {post.posterName} cohort: {post.cohort}
+              </p>
+              
               <div style={myStyles.row}>
               <div style={myStyles.cell}>
                <p>Shared by: {post.posterName}</p>
@@ -78,13 +67,16 @@ class ViewPosts extends Component {
               </div> 
              </div>
              {post.categories.length ? (
-                <div style={myStyles.row}>{post.categories.join}(", ")}</div>
+                <div style={myStyles.row}>{post.categories.join(", ")}</div>
              ) : null}
+             <center>
              <Button onClick={this.clickHandler} myStyle={myStyles.button}>
                  {this.state.showComments ? "Hide Comments" : "Show Comments"}
              </Button>
              {this.state.showComments ? this.renderComments(post) : null}
+            </center>
             </div> 
+            
         );
     }
 }
@@ -108,7 +100,7 @@ const myStyles = {
         height: "100vh",
         width: "80%",
         justifyContent: "flex-start",
-        alignitems: "center",
+        alignItems: "center",
         border: "1px solid brown",
         boxShadow: "5px 3px 5px brown",
         marginTop: 16,
