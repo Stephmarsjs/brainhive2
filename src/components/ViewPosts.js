@@ -54,10 +54,11 @@ class ViewPosts extends Component {
     };
         render() {
          let { postId } = this.props.match.params;
-         const post = this.props.post;
-         console.log(post); // undefined
-         console.log("Post id", {postId});
-         
+         postId = parseInt(postId);
+         const postIndex = this.props.posts.list.findIndex(
+             (item) => item.id === postId
+         );
+         const post = this.props.posts.list[postIndex];
          return (
               <div style={myStyles.container}>
               <h3>{post.title}</h3>
@@ -130,7 +131,7 @@ const myStyles = {
     },
     button: {
         marginTop: 16,
-        backgroundColor: "feb300",
+        backgroundColor: "brown",
         color: "white",
     },
   };
