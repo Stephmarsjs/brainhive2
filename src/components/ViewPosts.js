@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from "react-redux";
 import Button from "./common/Button";
 
 
@@ -135,5 +136,11 @@ const myStyles = {
         color: "white",
     },
   };
+
+  const mapStoreToProps = (store) => {
+      return {
+        posts: store.posts,
+      };
+    };
 
 export default withRouter(ViewPosts);
