@@ -34,6 +34,25 @@ class ViewPosts extends Component {
         return stars;
     };
 
+    renderYoutube = (post) => {
+      if (post.link.indexOf("youtube") >= 0) {
+          const videoIdIndex = post.link.indexOf("?v=");
+          const videoId = post.link.substring(videoIdIndex + 3);
+          console.log(videoId);
+          return (
+              <iframe
+               title="video"
+               width="560"
+               height="315"
+               src={`https://www.youtube.com/embed/${videoId}`}
+               frameBorder ="0"
+               allow="accelometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+               allowFullScreen
+              ></iframe> 
+        );
+      }
+    };
+
         render() {
          const { postId } = this.props.match.params;
          const post = this.props.post;
