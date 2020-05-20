@@ -45,11 +45,11 @@ class PostList extends Component {
   render() {
     return (
       <div>
-        {/* TODO: add searchbar  */}
         <div style={myStyles.searchBar}>
           <input style={myStyles.input}
             type="text"
             placeholder="Search"
+            value={this.state.searchBar}
             onChange={this.handleChange}
             />
         </div>

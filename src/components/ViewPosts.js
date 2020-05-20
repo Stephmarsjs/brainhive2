@@ -42,7 +42,7 @@ class ViewPosts extends Component {
           return (
               <iframe
                title="video"
-               width="560"
+               width="550"
                height="315"
                src={`https://www.youtube.com/embed/${videoId}`}
                frameBorder ="0"
@@ -63,10 +63,6 @@ class ViewPosts extends Component {
               <div style={myStyles.container}>
               <h3>{post.title}</h3>
               <h5>{post.resourceAuthor}</h5>
-              <p>
-                  Shared by: {post.posterName} cohort: {post.cohort}
-              </p>
-              
               <div style={myStyles.row}>
               <div style={myStyles.cell}>
                <p>Shared by: {post.posterName}</p>
