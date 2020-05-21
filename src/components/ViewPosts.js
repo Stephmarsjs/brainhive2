@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from "react=redux";
 import Button from "./common/Button";
 
 
@@ -132,4 +133,10 @@ const myStyles = {
     },
   };
 
-export default withRouter(ViewPosts);
+  const mapStoreToProps = (store) => {
+      return {
+          posts: store.posts,
+      };
+  };
+
+export default connect (mapStoreToProps)(withRouter(ViewPosts));
