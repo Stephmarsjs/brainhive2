@@ -19,7 +19,6 @@ const PostForm = (props) => {
   return (
     <div>
       <form style={myStyles.form} onSubmit={(e) => handleSubmit(e)}>
-        {/* <label htmlFor="posterName">Your Name: </label> */}
         <input
           style={myStyles.input}
           type="text"

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { connect } from "react=redux";
+import { connect } from "react-redux";
 import Button from "./common/Button";
 
 
@@ -139,4 +139,4 @@ const myStyles = {
       };
   };
 
-export default connect (mapStoreToProps)(withRouter(ViewPosts));
+export default connect(mapStoreToProps)(withRouter(ViewPosts));
