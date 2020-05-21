@@ -11,7 +11,7 @@ const myStyles = {
   button: {
     alignSelf: "center",
     // backgroundColor: "#F96295",
-    backgroundColor: "#ff62a1",
+    backgroundColor: "salmon",
     marginLeft: 6,
     marginRight: 6,
     marginBottom: 10,

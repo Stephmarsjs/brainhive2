@@ -5,7 +5,7 @@ import Post from './Post';
 
 
 const PostList = (props) => {
-console.log(props.posts.list)
+// console.log(props.posts.list)
   const handleChange = (e) => {
     const query = e.target.value;
 
@@ -17,7 +17,7 @@ console.log(props.posts.list)
   }
 
   const renderPosts = () => {
-    const display = props.posts.list.map((post) => {
+    const display = props.search.list.map((post) => {
       return <Post
         post={post}
         key={post.Id}

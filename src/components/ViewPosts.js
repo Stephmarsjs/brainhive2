@@ -56,7 +56,7 @@ class ViewPosts extends Component {
 
         render() {
          const { postId } = this.props.match.params;
-         const post = this.props.post;
+         const post = this.props.posts.list[postId - 1];
          console.log(post); // undefined
          console.log("Post id", {postId});
          

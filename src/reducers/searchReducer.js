@@ -1,7 +1,9 @@
+import posts from "../mock/posts";
 import {CHANGE_QUERY} from '../actions/types'
 
+
 const INITIAL_STORE = {
-    list: [],
+    list: [...posts],
     query: "",
     loading: false,
     errors: {}
@@ -12,7 +14,9 @@ export default (store = INITIAL_STORE, action) => {
         case CHANGE_QUERY:
             return {
                 ...store,
-                query: action.payload
+                query: action.payload.query,
+                list: action.payload.list
+                
             }
             default:
                 return store;
