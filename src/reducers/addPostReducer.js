@@ -29,7 +29,7 @@ export default (store= INITIAL_STORE, action) => {
                 ...store,
                 form: {
                  ...store.form,
-                 [action.payload.field]: action.payload.value,
+                 [action.payload.field]: action.payload.value
                 },
             };
            case SUBMIT_FORM:
