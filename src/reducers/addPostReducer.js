@@ -34,9 +34,9 @@ export default (store= INITIAL_STORE, action) => {
             };
            case SUBMIT_FORM:
                return {
-                   ...INITIAL_STORE,
+                   ...INITIAL_STORE, 
                };
               default:
                 return store;  
     }
-}
+};
